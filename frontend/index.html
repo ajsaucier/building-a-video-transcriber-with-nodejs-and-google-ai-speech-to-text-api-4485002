@@ -9,6 +9,9 @@
         #transcribedText{
             overflow: scroll;
         }
+        #transcriptionProgressBar{
+            visibility: visible;
+        }
     </style>
 </head>
 <body>
@@ -19,11 +22,17 @@
                 <video id="videoPreview" controls class="w-100"></video>
                 <h2 class="mt-4">Upload Video</h2>
                 <input type="file" id="videoUpload" class="form-control" />
+
+                <div class="progress" id="transcriptionProgressBar">
+                    <div class="progress-bar progress-bar-striped" style="width: 100%"></div>
+                </div>
+
                 <button id="transcribeButton" type="button" class="btn btn-primary mt-2">Transcribe</button>
             </div>
             <div class="col-lg-6">
                 <h2>Transcribed Text</h2>
-                <div id="transcribedText" class="border border-primary h-100"></div>
+                <!-- <div id="transcribedText" class="border border-primary h-100"></div> -->
+                 <textarea cols="60" rows="30" id="transcribedText"></textarea>
             </div>
         </div>
     </div>
@@ -32,8 +41,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Custom JavaScript -->
-    <script>
-        
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
